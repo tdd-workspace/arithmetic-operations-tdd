@@ -19,6 +19,18 @@ public class ArithmeticOperationTest {
     }
 
     @Test
+    void toReturnOneWhenThreeIsSubractedByTwo(){
+        //Arrange
+        ArithmeticOperation arithmeticOperation = new ArithmeticOperation();
+        int expectedValue = 1, three = 3, two = 2;
+
+        //Act
+        int actualValue = arithmeticOperation.subraction(three, two);
+
+        //Assert
+        assertEquals(expectedValue, actualValue);
+    }
+    @Test
     void toReturnEightWhenFourIsMultipliedByTwo(){
         //Arrange
         ArithmeticOperation arithmeticOperation = new ArithmeticOperation();
@@ -30,4 +42,17 @@ public class ArithmeticOperationTest {
         //Assert
         assertEquals(expectedProduct, actualProduct);
     }
+    @Test
+    void toReturnFiveWhenTenIsDividedByTwo(){
+        //Arrange
+        ArithmeticOperation arithmeticOperation = new ArithmeticOperation();
+        int expectedValue = 5, ten = 10, two = 2;
+
+        //Act
+        int actualValue = arithmeticOperation.division(ten, two);
+
+        //Assert
+        assertEquals(expectedValue, actualValue);
+    }
+
 }
