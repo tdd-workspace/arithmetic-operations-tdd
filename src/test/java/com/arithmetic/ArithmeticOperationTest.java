@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ArithmeticOperationTest {
     @Test
     void toReturnSixWhenFourIsAddedWithTwo(){
-    ArithmeticOperation arithmeticOperation = new ArithmeticOperationTest();
-    assertEquals(arithmeticOperation.add(4,6));
-}
+    ArithmeticOperation arithmeticOperation = new ArithmeticOperation();
+    assertEquals(6, arithmeticOperation.add(4,2));
+    }
 }
