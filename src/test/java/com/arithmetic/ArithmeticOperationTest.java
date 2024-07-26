@@ -17,4 +17,17 @@ public class ArithmeticOperationTest {
         //Assert
         assertEquals(expectedSum, actualSum);
     }
+
+    @Test
+    void toReturnEightWhenFourIsMultipliedByTwo(){
+        //Arrange
+        ArithmeticOperation arithmeticOperation = new ArithmeticOperation();
+        int expectedProduct = 8, four = 4, two = 2;
+
+        //Act
+        int actualProduct = arithmeticOperation.multiply(four, two);
+
+        //Assert
+        assertEquals(expectedProduct, actualProduct);
+    }
 }
