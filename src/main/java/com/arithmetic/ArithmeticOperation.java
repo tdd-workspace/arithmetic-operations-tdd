@@ -6,6 +6,6 @@ public class ArithmeticOperation {
     }
 
     public int multiply(int valueOne, int valueTwo) {
-        return 0;
+        return valueOne * valueTwo;
     }
 }
