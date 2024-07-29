@@ -13,7 +13,10 @@ public class ArithmeticOperation {
         return valueOne - valueTwo;
     }
 
-    public int division(int valueOne, int valueTwo) {
+    public int division(int valueOne, int valueTwo) throws ZeroDivisionException {
+        if(valueTwo == 0){
+            throw new ZeroDivisionException("Zero Division Error");
+        }
         return valueOne / valueTwo;
     }
 }
