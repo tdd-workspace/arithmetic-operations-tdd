@@ -1,58 +1,42 @@
 package com.arithmetic;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ArithmeticOperationTest {
+    private static ArithmeticOperation arithmeticOperation;
+    @BeforeAll
+    static void beforeAll(){
+        arithmeticOperation = new ArithmeticOperation();
+    }
     @Test
     void toReturnSixWhenFourIsAddedWithTwo(){
-        //Arrange
-        ArithmeticOperation arithmeticOperation = new ArithmeticOperation();
-        int expectedSum = 6 , four = 4, two = 2;
+        int two = 2, four = 4, six = 6;
 
-        //Act
-        int actualSum = arithmeticOperation.add(four,two);
-
-        //Assert
-        assertEquals(expectedSum, actualSum);
+        assertThat(arithmeticOperation.add(four, two), is(equalTo(six)));
     }
 
     @Test
     void toReturnOneWhenThreeIsSubractedByTwo(){
-        //Arrange
-        ArithmeticOperation arithmeticOperation = new ArithmeticOperation();
-        int expectedValue = 1, three = 3, two = 2;
+        int two = 2, three = 3, one = 1;
 
-        //Act
-        int actualValue = arithmeticOperation.subraction(three, two);
-
-        //Assert
-        assertEquals(expectedValue, actualValue);
+        assertThat(arithmeticOperation.subraction(three, two), is(equalTo(one)));
     }
     @Test
     void toReturnEightWhenFourIsMultipliedByTwo(){
-        //Arrange
-        ArithmeticOperation arithmeticOperation = new ArithmeticOperation();
-        int expectedProduct = 8, four = 4, two = 2;
+        int two = 2, four = 4, eight = 8;
 
-        //Act
-        int actualProduct = arithmeticOperation.multiply(four, two);
-
-        //Assert
-        assertEquals(expectedProduct, actualProduct);
+        assertThat(arithmeticOperation.multiply(four, two), is(equalTo(eight)));
     }
     @Test
     void toReturnFiveWhenTenIsDividedByTwo(){
-        //Arrange
-        ArithmeticOperation arithmeticOperation = new ArithmeticOperation();
-        int expectedValue = 5, ten = 10, two = 2;
+        int two = 2, ten = 10, five = 5;
 
-        //Act
-        int actualValue = arithmeticOperation.division(ten, two);
-
-        //Assert
-        assertEquals(expectedValue, actualValue);
+        assertThat(arithmeticOperation.division(ten, two), is(equalTo(five)));
     }
 
 }
